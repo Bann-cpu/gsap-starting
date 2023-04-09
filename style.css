@@ -1,0 +1,10 @@
+body {
+    height: 100dvh;
+    width: 100dvw; 
+}
+
+.container{
+    height: 200px;
+    width: 200px;
+    background-color: aquamarine;
+}
