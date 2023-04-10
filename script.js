@@ -20,7 +20,16 @@ document.querySelectorAll(".btn").forEach(function commandHandler(box) {
         })
 })
 
-document.querySelectorAll(".box-elements").forEach(function color(box) {
-        gsap.to(box, {backgroundColor: "random"})
-        color()
+gsap.to(".box-elements", {
+        scale: 0.1, 
+        delay: 6,
+        repeat: -1,
+        ease: Power1.out,
+        yoyo: true, 
+        stagger: {
+                amount: 1.5,
+                from: "center",
+                grid: "auto",
+        }
+
 })

@@ -90,15 +90,18 @@ body h1 {
     bottom: 200px;
     left: 900px;
     top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
 }
 
 .box-elements {
     height: 50px;
     width: 50px;
     background-color: aqua;
-    margin-top: 10px;
+    position: relative;
+    left: 10px;
 }
