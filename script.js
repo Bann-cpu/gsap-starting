@@ -14,22 +14,30 @@ gsap.to(myObject, {duration: 20, ease: "power1", onUpdate: function() { /*onStar
         console.log(/*myObject.rotate */)
 }} )
 
+
 document.querySelectorAll(".btn").forEach(function commandHandler(box) {
+        let clicked = false; 
+        
         box.addEventListener("click", () => {
-                gsap.set(box, {scale: 1.1, borderColor: "rgb(107, 143, 35)"})
-        })
-})
+          if (!clicked) { // vérifier si la boîte n'a pas encore été cliquée
+            gsap.set(box, {scale: 1.1, borderColor: "rgb(107, 143, 35)"});
+            clicked = true; // mettre à jour le statut de la boîte à "cliquée"
+          } else { // si la boîte a déjà été cliquée
+            gsap.set(box, {scale: 1, borderColor: "rgb(154, 205, 50)"}); // remettre la couleur de la border à sa valeur initiale
+            clicked = false; // mettre à jour le statut de la boîte à "non cliquée"
+          }
+        });
+      });
 
 gsap.to(".box-elements", {
         scale: 0.1, 
         delay: 6,
         repeat: -1,
-        ease: Power1.out,
+        ease: "power1",
         yoyo: true, 
         stagger: {
-                amount: 1.5,
-                from: "center",
+                amount: 0.5,
+                from: "random",
                 grid: "auto",
         }
-
 })

@@ -90,7 +90,8 @@ body h1 {
     bottom: 200px;
     left: 900px;
     top: 100px;
-    width: 600px;
+    width: 400px;
+    height: 300px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -101,7 +102,9 @@ body h1 {
 .box-elements {
     height: 50px;
     width: 50px;
-    background-color: aqua;
+    background-color: rgba(255, 0, 43, 0.63);
     position: relative;
     left: 10px;
+    border: solid 1px black;
+    border-radius: 20px;
 }
